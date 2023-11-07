@@ -5,6 +5,7 @@ import './App.css';
 // input에 value={} onchange={}가 조금 헷갈렸고 
 // 전개구문 후에 {}[]중 어느걸로 해야할지.. 실행전에 못 깨달음.. 오류 나면 바꿔봄..
 // onclick 을 넣을 때 인자로 받는 것이 조금 헷갈림..=>작성중 이해
+
 function App() {
   const [todo, setTodo] = useState([
     { id: 0, title: '첫번째 할일', content: '밥먹기', isDone: false },
@@ -22,6 +23,8 @@ function App() {
       isDone: false 
     }
     setTodo([...todo, newTodo])
+    setContent('')
+    setTitle('')
   }
   const removeBtn = function(id){
     const remove = todo.filter((item)=>{
